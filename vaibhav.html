@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> vaibhav's page</title>
+</head>
+<link rel="stylesheet" href="project.css">
+<body>
+  <marquee behavior="alternate" direction="left" scrollamount="10 ">
+    COMPUTER NETWORKING UNIT 3   |  COMPUTER NETWORKING UNIT 3    |  COMPUTER NETWORKING UNIT 3  
+  </marquee>  
+  <div class="banner">
+    <div</dir>
+    <nav>
+      <ul>
+        <li><a href="image.html">notes</a></li>
+        <li><a href="notes.html">images</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="#">help</a></li>
+      </ul>
+    </nav>
+<center><font face="bodoni" size="5"weight="10px"><h1><ul> computer networking <br>unit 3</ul></h1></font></center>
+<h2><u>SLIDING WINDOW PROTOCOL:</u></h2>
+<p class="first-paragraph">
+  Sliding Window Protocol
+The sliding window is a technique for sending multiple frames at a time. It controls the data packets between the two devices where reliable and gradual delivery of data frames is needed. It is also used in TCP (Transmission Control Protocol).
+<br>
+In this technique, each frame has sent from the sequence number. The sequence numbers are used to find the missing data in the receiver end. The purpose of the sliding window technique is to avoid duplicate data, so it uses the sequence number.
+<br>
+Types of Sliding Window Protocol
+Sliding window protocol has two types:
+<br><br>
+Go-Back-N ARQ
+Selective Repeat ARQ
+Go-Back-N ARQ
+Go-Back-N ARQ protocol is also known as Go-Back-N Automatic Repeat Request. It is a data link layer protocol that uses a sliding window method. In this, if any frame is corrupted or lost, all subsequent frames have to be sent again.
+<br><img src="sliding-window-protocol-3 -1.png" alt="">
+<br>
+The size of the sender window is N in this protocol. For example, Go-Back-8, the size of the sender window, will be 8. The receiver window size is always 1.
+<br><br>
+If the receiver receives a corrupted frame, it cancels it. The receiver does not accept a corrupted frame. When the timer expires, the sender sends the correct frame again. The design of the Go-Back-N ARQ protocol is shown below.
+<br><br>
+Sliding Window Protocol
+The example of Go-Back-N ARQ is shown below in the figure.
+<br><br>
+Sliding Window Protocol
+Selective Repeat ARQ
+Selective Repeat ARQ is also known as the Selective Repeat Automatic Repeat Request. It is a data link layer protocol that uses a sliding window method. The Go-back-N ARQ protocol works well if it has fewer errors. But if there is a lot of error in the frame, lots of bandwidth loss in sending the frames again. So, we use the Selective Repeat ARQ protocol. In this protocol, the size of the sender window is always equal to the size of the receiver window. The size of the sliding window is always greater than 1.
+<br>
+If the receiver receives a corrupt frame, it does not directly discard it. It sends a negative acknowledgment to the sender. The sender sends that frame again as soon as on the receiving negative acknowledgment. There is no waiting for any time-out to send that frame.</p>
+<br><h2><u>MULTIPLE ACCESS PROTOCOL:</h2></u>
+<p class="second-paragraph">
+Multiple Access Control – 
+If there is a dedicated link between the sender and the receiver then data link control layer is sufficient, however if there is no dedicated link present then multiple stations can access the channel simultaneously. Hence multiple access protocols are required to decrease collision and avoid crosstalk. For example, in a classroom full of students, when a teacher asks a question and all the students (or stations) start answering simultaneously (send data at same time) then a lot of chaos is created( data overlap or data lost) then it is the job of the teacher (multiple access protocols) to manage the students and make them answer one at a time. 
+<br>
+<br>
+Thus, protocols are required for sharing data on non dedicated channels. Multiple access protocols can be subdivided further as – 1. Random Access Protocol: In this, all stations have same superiority that is no station has more priority than another station. Any station can send data depending on medium’s state( idle or busy). It has two features: 
+<br>
+<br>
+There is no fixed time for sending data
+There is no fixed sequence of stations sending data
+The Random access protocols are further subdivided as: 
+<br><img src="image 1.jpg" alt="">
+(a) ALOHA – It was designed for wireless LAN but is also applicable for shared medium. In this, multiple stations can transmit data at the same time and can hence lead to collision and data being garbled. 
+<br><br>
+Pure Aloha: 
+When a station sends data it waits for an acknowledgement. If the acknowledgement doesn’t come within the allotted time then the station waits for a random amount of time called back-off time (Tb) and re-sends the data. Since different stations wait for different amount of time, the probability of further collision decreases. <br>
+Vulnerable Time = 2* Frame transmission time
+Throughput =  G exp{-2*G}
+Maximum throughput = 0.184 for G=0.5
+Slotted Aloha: <br> 
+It is similar to pure aloha, except that we divide time into slots and sending of data is allowed only at the beginning of these slots. If a station misses out the allowed time, it must wait for the next slot. This reduces the probability of collision. 
+Vulnerable Time =  Frame transmission time
+Throughput =  G exp{-*G}
+Maximum throughput = 0.368 for G=1
+For more information on ALOHA refer – LAN Technologies 
+<br><img src="image 2.png" alt="">
+(b) CSMA – Carrier Sense Multiple Access ensures fewer collisions as the station is required to first sense the medium (for idle or busy) before transmitting data. If it is idle then it sends data, otherwise it waits till the channel becomes idle. However there is still chance of collision in CSMA due to propagation delay. For example, if station A wants to send data, it will first sense the medium.If it finds the channel idle, it will start sending data. However, by the time the first bit of data is transmitted (delayed due to propagation delay) from station A, if station B requests to send data and senses the medium it will also find it idle and will also send data. 
+</p>
+<u><h2>ELEMENTARY DATA LINK PROTOCOL:</u></h2>
+<p class="third-paragraph">
+  Elementary data link protocol:
+<br>
+  Protocols in the data link layer are designed so that this layer can perform its basic functions: framing, error control and flow control. Framing is the process of dividing bit - streams from physical layer into data frames whose size ranges from a few hundred to a few thousand bytes. Error control mechanisms deals with transmission errors and retransmission of corrupted and lost frames. Flow control regulates speed of delivery and so that a fast sender does not drown a slow receiver.
+  <br><img src="data link image.jpg" alt=""><br>
+  Types of Data Link Protocols
+  Data link protocols can be broadly divided into two categories, depending on whether the transmission channel is noiseless or noisy.
+<br>
+  Simplex Protocol
+  The Simplex protocol is hypothetical protocol designed for unidirectional data transmission over an ideal channel, i.e. a channel through which transmission can never go wrong. It has distinct procedures for sender and receiver. The sender simply sends all its data available onto the channel as soon as they are available its buffer. The receiver is assumed to process all incoming data instantly. It is hypothetical since it does not handle flow control or error control.
+  <br>
+  Stop – and – Wait Protocol
+  Stop – and – Wait protocol is for noiseless channel too. It provides unidirectional data transmission without any error control facilities. However, it provides for flow control so that a fast sender does not drown a slow receiver. The receiver has a finite buffer size with finite processing speed. The sender can send a frame only when it has received indication from the receiver that it is available for further processing. <br>
+  <br><img src="data link image 2.jpg" alt=""><br>
+  Selective Repeat ARQ
+  This protocol also provides for sending multiple frames before receiving the acknowledgement for the first frame. However, here only the erroneous or lost frames are retransmitted, while the good frames are received and buffered.
+</p>
+<p class="fourth-paragraph">
+  <h2><u>CHANNEL ALLOCATION PROBLEM</u></h2><br>
+
+  Channel allocation is a process in which a single channel is divided and allotted to multiple users in order to carry user specific tasks. There are users quantity may vary every time the process takes place. If there are N number of users and channel is divided into N equal-sized sub channels, Each user is assigned one portion. If the number of users are small and dont vary at times, then Frequency Division Multiplexing can be used as it is a simple and efficient channel bandwidth allocating technique. 
+  <br>
+  Channel allocation problem can be solved by two schemes: Static Channel Allocation in LANs and MANs, and Dynamic Channel Allocation. 
+  These are explained as following below. 
+  <br><img src="CAP.png" alt="">
+  1. Static Channel Allocation in LANs and MANs: 
+  It is the classical or traditional approach of allocating a single channel among multiple competing users using Frequency Division Multiplexing (FDM). if there are N users, the frequency channel is divided into N equal sized portions (bandwidth), each user being assigned one portion. since each user has a private frequency band, there is no interference between users. 
+  <br>
+  <br>
+  However, it is not suitable in case of a large number of users with variable bandwidth requirements.
+  It is not efficient to divide into fixed number of chunks. 
+</p>
+</body>
+</html>

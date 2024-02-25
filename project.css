@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+   ;
+}
+.banner{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(deadpool.png.png);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 90%;
+    background-attachment: fixed;
+    background-position: bottom;
+    flex: auto;
+border-radius: 50px ;
+}
+marquee{
+    background-color: rgb(202, 193, 182);
+    font-size: larger;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(102, 91, 75);
+}
+
+nav {
+    margin-right:100px;
+    padding: 800;
+    text-align:calc(100px,200px);
+}
+nav ul {
+    display: inline-block;
+    list-style:none;
+    transform: skew(-20deg);
+    
+}
+nav ul li{
+    background-color: rgb(206, 184, 164);
+    float:left;
+    border-right: 1px solid rgb(41, 38, 34);
+    text-transform:uppercase;
+    color: rgb(81, 83, 77);
+    font-weight: 900;
+    transition: all 0.2s linear;
+}
+nav ul li:hover{
+    border: radius 10px;;
+    transition:0;
+    background-color: rgba(68, 168, 155, 0.932);
+    color: rgb(255, 255, 255);
+}
+a{
+    color: inherit;
+    display: block;
+    padding: 10px 20px;
+    text-decoration:none;
+    transform: skew(20deg);
+}
+nav ul li:first-child{
+    border-radius: 10px 0 0 10px;
+}
+nav ul li:last-child{
+    border-radius: 0 10px 10px 0;
+}
+h1{
+    color:rgb(34, 211, 211);
+    background-color: rgb(43, 42, 42);
+    opacity: 0.6;
+}
+h2{
+padding:10px;
+    font-size:30px;
+    color: rgb(173, 175, 216);
+    opacity: 0.6;
+    font-weight: 100;
+    font-family:serif;
+}
+.first-paragraph{
+    padding: 30px;
+    color: rgb(206, 212, 145);
+    text-align: justify;
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.second-paragraph{
+    padding: 30px;
+    color: rgb(158, 194, 142);
+    text-align: justify;
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.third-paragraph{
+    padding: 30px;
+    color: rgb(173, 139, 106);
+    text-align: justify;
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.fourth-paragraph{
+    padding: 30px;
+    color: rgb(173, 139, 106);
+    text-align: justify;
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
